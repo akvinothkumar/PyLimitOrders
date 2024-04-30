@@ -3,7 +3,9 @@ from typing import Protocol
 
 class PriceListener(Protocol):
 
-    def on_price_tick(self, product_id: str, price: float):
+  
+
+    def on_price_tick(self, product_id: str, limit_price: float, order_mode: bool, current_price: float):
         """
         invoked on market data change
         :param product_id: id of the product that has a price change
